@@ -1,14 +1,16 @@
 "use client";
 import { useState, useEffect, useRef } from 'react';
-
-const images = [
-    { src: '/topics/ai.jpg', alt: 'Artificial Intelligence' },
-    { src: '/topics/ethics.jpg', alt: 'Ethics in Tech' },
-    { src: '/topics/security.jpg', alt: 'Cyber Security' },
-  ];
+import meetings from '../data/meetings.json';
 
 export default function TopicCarousel() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const images = meetings.map(({ filename, alt, title }) => ({
+    src: `/topics/${filename}`,
+    alt,
+    title
+  }));
+  const [currentIndex, setCurrentIndex] = useState(() =>
+    Math.floor(Math.random() * images.length)
+  );
   const [paused, setPaused] = useState(false);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -16,7 +18,7 @@ export default function TopicCarousel() {
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
 
-  const delay = 5000; // 5 seconds autoplay
+  const delay = 8000; // autoplay delay in ms
 
   // Reset timer helper
   const resetTimeout = () => {
@@ -79,31 +81,48 @@ export default function TopicCarousel() {
       onTouchEnd={onTouchEnd}
     >
       {/* Slides */}
-      {images.map(({ src, alt }, index) => (
-        <img
+      {images.map(({ src, alt, title }, index) => (
+        <div
           key={src}
-          src={src}
-          alt={alt}
-          className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-700 ${
-            index === currentIndex ? 'opacity-100' : 'opacity-0 pointer-events-none'
-          }`}
-          loading="lazy"
-          draggable={false}
-        />
+          className={`absolute top-0 left-0 w-full h-full transition-opacity duration-700 ${index === currentIndex ? 'opacity-100' : 'opacity-0 pointer-events-none'
+            }`}
+        >
+          <img
+            src={src}
+            alt={alt}
+            className="w-full h-full object-cover"
+            loading="lazy"
+            draggable={false}
+          />
+          {/* Title overlay */}
+          <div className={`
+						absolute text-white/90 text-sm px-2 py-1
+						bg-black/60 backdrop-blur-sm
+						max-w-full truncate
+
+						bottom-0 w-full text-center
+						sm:top-2 sm:left-2 sm:bottom-auto sm:w-auto sm:text-left
+
+						rounded-b-lg sm:rounded-md
+					`}>
+            {title}
+          </div>
+        </div>
       ))}
-  
+
+
       {/* Controls */}
       <button
         onClick={prev}
         aria-label="Previous slide"
-        className="absolute top-1/2 left-2 -translate-y-1/2 bg-black bg-opacity-40 text-white rounded-full p-2"
+        className="hidden sm:block absolute top-1/2 left-2 -translate-y-1/2 bg-black/60 text-white/80 rounded-full p-2 hover:bg-black/80 transition"
       >
         ‹
       </button>
       <button
         onClick={next}
         aria-label="Next slide"
-        className="absolute top-1/2 right-2 -translate-y-1/2 bg-black bg-opacity-40 text-white rounded-full p-2"
+        className="hidden sm:block absolute top-1/2 right-2 -translate-y-1/2 bg-black/60 text-white/80 rounded-full p-2 hover:bg-black/80 transition"
       >
         ›
       </button>

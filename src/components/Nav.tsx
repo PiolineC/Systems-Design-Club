@@ -31,9 +31,8 @@ export default function Nav() {
             <li key={href}>
               <Link
                 href={href}
-                className={`hover:text-indigo-600 ${
-                  pathname === href ? "text-indigo-600 font-semibold" : ""
-                }`}
+                className={`hover:text-indigo-600 ${pathname === href ? "text-indigo-600 font-semibold" : ""
+                  }`}
               >
                 {label}
               </Link>
@@ -82,9 +81,8 @@ export default function Nav() {
               <Link
                 href={href}
                 onClick={handleLinkClick}
-                className={`block text-gray-700 font-medium hover:text-indigo-600 ${
-                  pathname === href ? "text-indigo-600 font-semibold" : ""
-                }`}
+                className={`block text-gray-700 font-medium hover:text-indigo-600 ${pathname === href ? "text-indigo-600 font-semibold" : ""
+                  }`}
               >
                 {label}
               </Link>

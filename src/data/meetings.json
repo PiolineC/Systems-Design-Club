@@ -1,0 +1,68 @@
+[
+    {
+        "title": "Design Tradeoffs in Distributed Systems",
+        "datetime": "2025-02-10T18:00:00Z",
+        "filename": "Design Tradeoffs in Distributed Systems.png",
+        "alt": "Design Tradeoffs in Distributed Systems"
+    },
+    {
+        "title": "A Killer Use Case of Serial (in network edge)",
+        "datetime": "2025-02-16T18:00:00Z",
+        "filename": "A Killer Use Case of Serial (in network edge).png",
+        "alt": "A Killer Use Case of Serial (in network edge)"
+    },
+    {
+        "title": "A Brief History of Time",
+        "datetime": "2025-02-23T18:00:00Z",
+        "filename": "A Brief History of Time.png",
+        "alt": "A Brief History of Time"
+    },
+    {
+        "title": "Networking for the SWE and Cybersecurity Interview",
+        "datetime": "2025-03-02T18:00:00Z",
+        "filename": "Networking for the SWE and Cybersecurity Interview.png",
+        "alt": "Networking for the SWE and Cybersecurity Interview"
+    },
+    {
+        "title": "Lead Up to RSA",
+        "datetime": "2025-03-16T17:00:00Z",
+        "filename": "Lead Up to RSA.png",
+        "alt": "Lead Up to RSA"
+    },
+    {
+        "title": "How to Update Your Password",
+        "datetime": "2025-03-30T17:00:00Z",
+        "filename": "How to Update Your Password.png",
+        "alt": "How to Update Your Password"
+    },
+    {
+        "title": "How to Update Your Password Part 2",
+        "datetime": "2025-04-27T17:00:00Z",
+        "filename": "How to Update Your Password Part 2.png",
+        "alt": "How to Update Your Password Part 2"
+    },
+    {
+        "title": "Fast Data Access Patterns in Hardware: B+ Trees",
+        "datetime": "2025-05-04T17:00:00Z",
+        "filename": "B+ Trees.png",
+        "alt": "Fast Data Access Patterns in Hardware: B+ Trees"
+    },
+    {
+        "title": "Containers: A Journey from Bare Metal to Kubernetes",
+        "datetime": "2025-05-11T17:00:00Z",
+        "filename": "Containers.png",
+        "alt": "Containers: A Journey from Bare Metal to Kubernetes"
+    },
+    {
+        "title": "How to Actually Build TinyURL",
+        "datetime": "2025-05-18T17:00:00Z",
+        "filename": "TinyURL.png",
+        "alt": "How to Actually Build TinyURL"
+    },
+    {
+        "title": "Low Latency Trading & C++",
+        "datetime": "2025-05-25T17:00:00Z",
+        "filename": "Low Latency Trading.png",
+        "alt": "Low Latency Trading & C++"
+    }
+]
