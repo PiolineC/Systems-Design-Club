@@ -1,16 +1,18 @@
 "use client";
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
 import meetings from '../data/meetings.json';
 
 export default function TopicCarousel() {
-  const images = meetings.map(({ filename, alt, title }) => ({
-    src: `/topics/${filename}`,
-    alt,
-    title
-  }));
-  const [currentIndex, setCurrentIndex] = useState(() =>
-    Math.floor(Math.random() * images.length)
-  );
+  const images = useMemo(() => {
+    return meetings.map(({ filename, alt, title }) => ({
+      src: `/topics/${filename}`,
+      alt,
+      title,
+    }));
+  }, []);
+
+  const [currentIndex, setCurrentIndex] = useState(images.length - 1);
+
   const [paused, setPaused] = useState(false);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -115,14 +117,14 @@ export default function TopicCarousel() {
       <button
         onClick={prev}
         aria-label="Previous slide"
-        className="hidden sm:block absolute top-1/2 left-2 -translate-y-1/2 bg-black/60 text-white/80 rounded-full p-2 hover:bg-black/80 transition"
+        className="z-10 hidden sm:block absolute top-1/2 left-2 -translate-y-1/2 bg-black/60 text-white/80 rounded-full p-2 hover:bg-black/80 transition"
       >
         ‹
       </button>
       <button
         onClick={next}
         aria-label="Next slide"
-        className="hidden sm:block absolute top-1/2 right-2 -translate-y-1/2 bg-black/60 text-white/80 rounded-full p-2 hover:bg-black/80 transition"
+        className="z-10 hidden sm:block absolute top-1/2 right-2 -translate-y-1/2 bg-black/60 text-white/80 rounded-full p-2 hover:bg-black/80 transition"
       >
         ›
       </button>

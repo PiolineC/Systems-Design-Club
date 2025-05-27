@@ -8,30 +8,29 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/meetings", label: "Meetings" },
   { href: "/resources", label: "Resources" },
-  { href: "/about", label: "About" },
+  { href: "/team", label: "Team" }
 ];
 
 export default function Nav() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // Function to close mobile menu after clicking a link
   const handleLinkClick = () => setMobileMenuOpen(false);
 
   return (
-    <nav className="bg-white shadow-sm">
+    <nav className="bg-gray-900 border-b border-gray-700 shadow-sm">
       <div className="container mx-auto flex justify-between items-center px-6 py-4">
-        <Link href="/" className="text-2xl font-bold text-indigo-600">
-          SD Book Club
+        <Link href="/" className="text-2xl font-bold text-indigo-400">
+          The Quorum
         </Link>
 
         {/* Desktop menu */}
-        <ul className="hidden md:flex space-x-6 text-gray-700 font-medium">
+        <ul className="hidden md:flex space-x-6 text-gray-300 font-medium">
           {navLinks.map(({ href, label }) => (
             <li key={href}>
               <Link
                 href={href}
-                className={`hover:text-indigo-600 ${pathname === href ? "text-indigo-600 font-semibold" : ""
+                className={`hover:text-indigo-400 transition-colors ${pathname === href ? "text-indigo-400 font-semibold" : ""
                   }`}
               >
                 {label}
@@ -48,7 +47,7 @@ export default function Nav() {
           aria-expanded={mobileMenuOpen}
         >
           <svg
-            className="w-6 h-6 text-indigo-600"
+            className="w-6 h-6 text-indigo-400"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -75,13 +74,13 @@ export default function Nav() {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <ul className="md:hidden bg-white border-t border-gray-200 space-y-2 px-6 py-4">
+        <ul className="md:hidden bg-gray-800 border-t border-gray-700 space-y-2 px-6 py-4">
           {navLinks.map(({ href, label }) => (
             <li key={href}>
               <Link
                 href={href}
                 onClick={handleLinkClick}
-                className={`block text-gray-700 font-medium hover:text-indigo-600 ${pathname === href ? "text-indigo-600 font-semibold" : ""
+                className={`block text-gray-300 font-medium hover:text-indigo-400 transition-colors ${pathname === href ? "text-indigo-400 font-semibold" : ""
                   }`}
               >
                 {label}

@@ -2,8 +2,8 @@ import MeetingsTimeline from '@/components/MeetingsTimeline';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Meetings – SD Book Club',
-  description: 'Browse past and upcoming Systems Design Book Club meetings.',
+  title: 'Meetings',
+  description: 'Browse past and upcoming club meetings.',
 };
 
 export default function MeetingsPage() {

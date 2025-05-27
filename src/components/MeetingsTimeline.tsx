@@ -22,7 +22,7 @@ export default function MeetingsTimeline() {
   const [now, setNow] = useState(new Date());
 
   useEffect(() => {
-    const interval = setInterval(() => setNow(new Date()), 1000);
+    const interval = setInterval(() => setNow(new Date()), 60000);
     return () => clearInterval(interval);
   }, []);
 
@@ -36,7 +36,6 @@ export default function MeetingsTimeline() {
   }, [now]);
 
   if (upcomingMeetings.length === 0) {
-    const timeZone = 'America/New_York';
     const nextSunLocal = setMinutes(setHours(nextSunday(now), 13), 0);
     const utcString = format(nextSunLocal, "yyyy-MM-dd'T'HH:mm:ssXXX");
 
@@ -49,9 +48,9 @@ export default function MeetingsTimeline() {
   const nextMeeting = upcomingMeetings[0];
 
   return (
-    <section className="max-w-2xl mx-auto p-6">
+    <section className="max-w-2xl mx-auto p-4 sm:p-5">
       {nextMeeting && (
-        <div className="mb-6 bg-blue-100 text-blue-900 p-4 rounded-lg shadow-sm">
+        <div className="mb-4 bg-blue-100 text-blue-900 p-3 rounded-md shadow-sm">
           <p className="text-lg font-semibold">Next meeting:</p>
           <p className="text-xl font-bold">{nextMeeting.title}</p>
           <p className="text-sm text-gray-700">
@@ -63,29 +62,19 @@ export default function MeetingsTimeline() {
         </div>
       )}
 
-      <h2 className="text-2xl font-semibold mt-8 mb-3">Upcoming Meetings</h2>
-      <ul className="space-y-2">
-        {upcomingMeetings.map((m) => (
-          <li key={m.datetime} className="p-3 border rounded-md">
-            <p className="font-medium">{m.title}</p>
-            <p className="text-sm text-gray-600">
-              {format(new Date(nextMeeting.datetime), "eeee, MMMM d 'at' h:mm a")}
-            </p>
-          </li>
-        ))}
-      </ul>
-
-      <h2 className="text-2xl font-semibold mt-10 mb-3">Past Meetings</h2>
-      <ul className="space-y-2">
-        {pastMeetings.map((m) => (
-          <li key={m.datetime} className="p-3 border rounded-md bg-gray-50">
-            <p className="font-medium">{m.title}</p>
-            <p className="text-sm text-gray-600">
-              {format(new Date(m.datetime), "PPP")}
-            </p>
-          </li>
-        ))}
-      </ul>
+      <h2 className="text-xl font-semibold text-gray-200 mt-5 mb-2">Past Meetings</h2>
+      <div className="scroll-on-hover max-h-64 sm:max-h-86 border border-gray-700 rounded-lg bg-gray-800 overflow-y-auto">
+        <ul className="divide-y divide-gray-700">
+          {pastMeetings.map((m) => (
+            <li key={m.datetime} className="p-3">
+              <p className="font-medium text-gray-100">{m.title}</p>
+              <p className="text-sm text-gray-500">
+                {format(new Date(m.datetime), "PPP")}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
   );
 }

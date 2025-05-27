@@ -3,7 +3,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: 'Systems Design Book Club',
+  title: 'The Quorum - Systems Design Book Club',
   description: 'A book club for systems design enthusiasts',
 };
 

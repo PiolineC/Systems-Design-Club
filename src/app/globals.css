@@ -28,3 +28,19 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.scroll-on-hover {
+  overflow-y: hidden;
+}
+
+.scroll-on-hover:hover {
+  overflow-y: auto;
+}
+
+.scroll-on-hover::-webkit-scrollbar {
+  width: 6px;
+}
+.scroll-on-hover::-webkit-scrollbar-thumb {
+  background-color: rgb(100, 100, 100);
+  border-radius: 3px;
+}
