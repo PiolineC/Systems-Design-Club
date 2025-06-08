@@ -74,30 +74,31 @@ export default function TopicCarousel() {
   };
 
   return (
-    <div
-      className="relative overflow-hidden rounded-lg aspect-video"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-      onTouchStart={onTouchStart}
-      onTouchMove={onTouchMove}
-      onTouchEnd={onTouchEnd}
-    >
-      {/* Slides */}
-      {images.map(({ src, alt, title }, index) => (
-        <div
-          key={src}
-          className={`absolute top-0 left-0 w-full h-full transition-opacity duration-700 ${index === currentIndex ? 'opacity-100' : 'opacity-0 pointer-events-none'
-            }`}
-        >
-          <img
-            src={src}
-            alt={alt}
-            className="w-full h-full object-cover"
-            loading="lazy"
-            draggable={false}
-          />
-          {/* Title overlay */}
-          <div className={`
+    <div className="w-full flex justify-center mb-6">
+      <div
+        className="w-full max-w-5xl px-4 md:w-9/10 relative overflow-hidden rounded-lg aspect-video"
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+      >
+        {/* Slides */}
+        {images.map(({ src, alt, title }, index) => (
+          <div
+            key={src}
+            className={`absolute top-0 left-0 w-full h-full transition-opacity duration-700 ${index === currentIndex ? 'opacity-100' : 'opacity-0 pointer-events-none'
+              }`}
+          >
+            <img
+              src={src}
+              alt={alt}
+              className="w-full h-full object-cover"
+              loading="lazy"
+              draggable={false}
+            />
+            {/* Title overlay */}
+            <div className={`
 						absolute text-white/90 text-sm px-2 py-1
 						bg-black/60 backdrop-blur-sm
 						max-w-full truncate
@@ -107,27 +108,28 @@ export default function TopicCarousel() {
 
 						rounded-b-lg sm:rounded-md
 					`}>
-            {title}
+              {title}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
 
 
-      {/* Controls */}
-      <button
-        onClick={prev}
-        aria-label="Previous slide"
-        className="z-10 hidden sm:block absolute top-1/2 left-2 -translate-y-1/2 bg-black/60 text-white/80 rounded-full p-2 hover:bg-black/80 transition"
-      >
-        ‹
-      </button>
-      <button
-        onClick={next}
-        aria-label="Next slide"
-        className="z-10 hidden sm:block absolute top-1/2 right-2 -translate-y-1/2 bg-black/60 text-white/80 rounded-full p-2 hover:bg-black/80 transition"
-      >
-        ›
-      </button>
+        {/* Controls */}
+        <button
+          onClick={prev}
+          aria-label="Previous slide"
+          className="z-10 hidden sm:block absolute top-1/2 left-2 -translate-y-1/2 bg-black/60 text-white/80 rounded-full p-2 hover:bg-black/80 transition"
+        >
+          ‹
+        </button>
+        <button
+          onClick={next}
+          aria-label="Next slide"
+          className="z-10 hidden sm:block absolute top-1/2 right-2 -translate-y-1/2 bg-black/60 text-white/80 rounded-full p-2 hover:bg-black/80 transition"
+        >
+          ›
+        </button>
+      </div>
     </div>
   );
 }

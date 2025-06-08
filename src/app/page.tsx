@@ -1,17 +1,23 @@
 import TopicCarousel from '@/components/TopicCarousel';
 import ValueCard from '@/components/Card';
+import LogoScroller from '@/components/LogoScroller';
 
 export default function Home() {
   return (
     <main className="max-w-5xl mx-auto p-4">
       <section className="text-center">
-        <h2 className="text-4xl font-extrabold mx-auto mb-4 text-indigo-400">Welcome to The Quorum!</h2>
+        <h2 className="text-4xl font-extrabold mx-auto mb-6 text-indigo-400">
+          Welcome to The Quorum!
+        </h2>
+
         <p className="text-lg text-gray-300 mb-6">
-          Join us to explore, discuss, and master systems design through curated readings, lectures, and lively meetings.
+          Join us to master systems design through curated readings, lectures, and lively meetings.
         </p>
 
+        <TopicCarousel />
+
         {/* Value cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl w-17/20 mx-auto mb-6">
           <ValueCard
             icon={
               <svg
@@ -30,7 +36,7 @@ export default function Home() {
               </svg>
             }
             title={<>Inquiry-Based<br />Learning</>}
-            description="We foster curiosity and critical thinking, encouraging members to actively engage in their learning. Our meetings emphasize discovery, analysis, and investigation to deepen understanding of the material and its applications."
+            description="We foster curiosity and critical thinking, encouraging members to actively engage in their learning. Our meetings emphasize discovery, analysis, and deep understanding."
           />
 
           <ValueCard
@@ -72,11 +78,15 @@ export default function Home() {
               </svg>
             }
             title="Community & Collaboration"
-            description="We foster a collaborative community where members mentor one another, share knowledge, and strive together toward new heights."
+            description="We are a collaborative community where members uplift one another through mentorship, knowledge-sharing, and a collective pursuit of excellence."
           />
         </div>
 
-        <TopicCarousel />
+        <h3 className="text-indigo-400 text-center mb-1">
+          Special thanks to:
+        </h3>
+        <LogoScroller />
+
       </section>
     </main>
   );
