@@ -36,7 +36,7 @@ export default function Home() {
               </svg>
             }
             title={<>Inquiry-Based<br />Learning</>}
-            description="We foster curiosity and critical thinking, encouraging members to actively engage in their learning. Our meetings emphasize discovery, analysis, and deep understanding."
+            description="We believe learning is most powerful when driven by curiosity. Our members explore deeply, think critically, and take ownership of their growth."
           />
 
           <ValueCard
@@ -78,7 +78,7 @@ export default function Home() {
               </svg>
             }
             title="Community & Collaboration"
-            description="We are a collaborative community where members uplift one another through mentorship, knowledge-sharing, and a collective pursuit of excellence."
+            description="We uplift one another through mentorship, knowledge-sharing, and by fostering spaces for discovery and meaningful engagement."
           />
         </div>
 
