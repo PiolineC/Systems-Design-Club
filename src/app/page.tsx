@@ -4,7 +4,7 @@ import LogoScroller from '@/components/LogoScroller';
 
 export default function Home() {
   return (
-    <main className="max-w-5xl mx-auto">
+    <main className="max-w-5xl mx-auto p-4">
       <section className="text-center">
         <h2 className="text-4xl font-extrabold mx-auto mb-4 text-indigo-400">
           Welcome to The Quorum!

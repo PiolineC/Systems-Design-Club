@@ -11,6 +11,18 @@
     "author": "Will Larson",
     "link": "https://staffeng.com/book"
   },
+    {
+    "type": "text",
+    "title": "In Search of an Understandable Consensus Algorithm (Raft)",
+    "author": "Diego Ongaro and John Ousterhout",
+    "link": "https://raft.github.io/raft.pdf"
+  },
+  {
+    "type": "text",
+    "title": "Dynamo: Amazon’s Highly Available Key-value Store",
+    "author": "Giuseppe DeCandia et al.",
+    "link": "https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf"
+  },
   {
     "type": "presentation",
     "title": "Raft Consensus Algorithm",
