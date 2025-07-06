@@ -6,7 +6,7 @@ interface CardProps {
   description: string;
 }
 
-export default function Card({ icon, title, description }: CardProps) {
+export default function ValueCard({ icon, title, description }: CardProps) {
   return (
     <div className="bg-gray-800 rounded-lg p-6 text-gray-300 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
       <div className="h-10 w-10 mb-4 text-indigo-400">{icon}</div>

@@ -1,0 +1,24 @@
+[
+  {
+    "type": "text",
+    "title": "Designing Data-Intensive Applications",
+    "author": "Martin Kleppmann",
+    "link": "https://dataintensive.net"
+  },
+  {
+    "type": "text",
+    "title": "Staff Engineer",
+    "author": "Will Larson",
+    "link": "https://staffeng.com/book"
+  },
+  {
+    "type": "presentation",
+    "title": "Raft Consensus Algorithm",
+    "embedUrl": "https://docs.google.com/presentation/d/1TDunApBaR-3dmKYKa8BSrnadV6XqN1DhFxDMC-4GWNE/embed"
+  },
+  {
+    "type": "presentation",
+    "title": "How to Actually Build TinyURL",
+    "embedUrl": "https://docs.google.com/presentation/d/1VqmeWJ_A98m2CIEPaz4XQNs2itvCcmAGztozxLxfcDo/embed"
+  }
+]

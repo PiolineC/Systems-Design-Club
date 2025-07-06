@@ -64,5 +64,35 @@
         "datetime": "2025-06-01T17:00:00Z",
         "filename": "TinyURL.png",
         "alt": "How to Actually Build TinyURL"
+    },
+    {
+        "title": "Elliptic Curve Cryptography",
+        "datetime": "2025-06-08T17:00:00Z",
+        "filename": "Elliptic Curves.png",
+        "alt": "Elliptic Curve Cryptography"
+    },
+    {
+        "title": "How to Be a Lion SWE",
+        "datetime": "2025-06-15T17:00:00Z",
+        "filename": "Lion.png",
+        "alt": "How to Be a Lion SWE"
+    },
+    {
+        "title": "Raft Consensus Algorithm",
+        "datetime": "2025-06-22T17:00:00Z",
+        "filename": "Raft.png",
+        "alt": "Raft Consensus Algorithm"
+    },
+    {
+        "title": "Where Did My Certificate Go?",
+        "datetime": "2025-06-29T17:00:00Z",
+        "filename": "Certificate.png",
+        "alt": "Where Did My Certificate Go?"
+    },
+    {
+        "title": "Hamming Codes",
+        "datetime": "2025-07-06T17:00:00Z",
+        "filename": "Hamming Codes.png",
+        "alt": "Hamming Codes"
     }
 ]

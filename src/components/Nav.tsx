@@ -8,7 +8,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/meetings", label: "Meetings" },
   { href: "/resources", label: "Resources" },
-  { href: "/team", label: "Team" }
+  { href: "/apply", label: "Apply" }
 ];
 
 export default function Nav() {

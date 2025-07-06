@@ -11,7 +11,7 @@ export default function TopicCarousel() {
     }));
   }, []);
 
-  const [currentIndex, setCurrentIndex] = useState(images.length - 1);
+  const [currentIndex, setCurrentIndex] = useState(images.length - 3);
 
   const [paused, setPaused] = useState(false);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
