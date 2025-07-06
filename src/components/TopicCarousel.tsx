@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect, useMemo, useRef } from 'react';
 import meetings from '../data/meetings.json';
+import Image from 'next/image';
 
 export default function TopicCarousel() {
   const images = useMemo(() => {
@@ -49,7 +50,7 @@ export default function TopicCarousel() {
     }
 
     return () => resetTimeout();
-  }, [currentIndex, paused]);
+  }, [currentIndex, paused, images.length]);
 
   // Swipe handlers
   const onTouchStart = (e: React.TouchEvent) => {
@@ -90,11 +91,13 @@ export default function TopicCarousel() {
             className={`absolute top-0 left-0 w-full h-full transition-opacity duration-700 ${index === currentIndex ? 'opacity-100' : 'opacity-0 pointer-events-none'
               }`}
           >
-            <img
+            <Image
               src={src}
               alt={alt}
-              className="w-full h-full object-cover"
-              loading="lazy"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 800px"
+              priority={index === currentIndex}
               draggable={false}
             />
             {/* Title overlay */}

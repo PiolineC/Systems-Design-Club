@@ -3,7 +3,7 @@ export default function ApplyPage() {
     <div className="max-w-3xl mx-auto p-4 text-center space-y-8">
       <h1 className="text-4xl font-extrabold text-indigo-400">Apply to Join</h1>
       <p className="text-lg text-gray-300">
-        We're currently closed to new members. 
+        {"We're currently closed to new members."} 
         <br></br>Recruiting will reopen at the beginning of the next school year.
       </p>
 
