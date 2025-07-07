@@ -4,13 +4,13 @@ import LogoScroller from '@/components/LogoScroller';
 
 export default function Home() {
   return (
-    <main className="max-w-5xl mx-auto p-4">
-      <section className="text-center">
-        <h2 className="text-4xl font-extrabold mx-auto mb-4 text-indigo-400">
+    <main className="max-w-5xl mx-auto">
+      <section className="max-w-3xl mx-auto px-4 py-6 text-center text-gray-300">
+        <h2 className="text-4xl font-extrabold mx-auto mb-2 text-indigo-400">
           Welcome to The Quorum!
         </h2>
 
-        <p className="text-lg text-gray-300 mb-4">
+        <p className="text-lg text-gray-300">
           Join us to master systems design through curated readings, lectures, and lively meetings.
         </p>
       </section>

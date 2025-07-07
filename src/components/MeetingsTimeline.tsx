@@ -54,20 +54,23 @@ export default function MeetingsTimeline() {
   return (
     <section className="max-w-5xl mx-auto p-4 sm:p-5">
       {nextMeeting && (
-        <div className="max-w-2xl mx-auto mb-2 bg-blue-200 text-blue-900 p-3 mb-6 rounded-md shadow-sm">
-          <p className="text-lg font-semibold">Next meeting:</p>
-          <p className="text-xl font-bold">{nextMeeting.title}</p>
-          <p className="text-sm text-gray-700">
-            {format(new Date(nextMeeting.datetime), "eeee, MMMM d 'at' h:mm a")}
-          </p>
-          <p className="text-sm mt-1 italic">
-            Starts in {formatDistanceToNow(new Date(nextMeeting.datetime), { addSuffix: true })}
-          </p>
+        <div className="max-w-2xl mx-auto mb-6">
+          <div className="bg-blue-100 text-blue-900 border border-blue-300 rounded-lg shadow-sm p-4">
+            <p className="text-sm font-medium uppercase tracking-wide mb-1 text-blue-700">
+              Next Meeting
+            </p>
+            <p className="text-xl font-bold">{nextMeeting.title}</p>
+            <p className="text-sm text-blue-800">
+              {format(new Date(nextMeeting.datetime), "eeee, MMMM d 'at' h:mm a")}
+            </p>
+            <p className="text-sm mt-1 italic text-blue-700">
+              Starts {formatDistanceToNow(new Date(nextMeeting.datetime), { addSuffix: true })}
+            </p>
+          </div>
         </div>
       )}
 
       <section>
-        <h2 className="text-2xl font-bold mb-4 text-indigo-400">Past Meetings</h2>
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
           {pastMeetings.map((m) => (
             <MeetingEntry
