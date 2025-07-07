@@ -1,3 +1,4 @@
+import SectionHeader from "@/components/SectionHeader";
 import ReferenceCard from '@/components/ReferenceCard';
 import PresentationEmbed from '@/components/PresentationEmbed';
 
@@ -13,15 +14,15 @@ export default function ResourcesPage() {
   const presentations = resources.filter((r) => r.type === "presentation");
 
   return (
-    <div className="max-w-5xl mx-auto p-4 text-center space-y-8">
+    <div className="max-w-5xl mx-auto">
   
-      <header className="text-center space-y-2">
-        <h1 className="text-4xl font-extrabold mx-auto mb-4 text-indigo-400">Resources</h1>
-        <p className="text-lg text-gray-300">Recommended readings and featured talks from our club members.</p>
-      </header>
+      <SectionHeader
+        title="Resources"
+        description="Recommended readings and featured talks from our club members."
+      />
 
       {/* Reference Texts */}
-      <section>
+      <section className="px-4 text-center space-y-8">
         <h2 className="text-2xl font-bold mb-4 text-indigo-400">Reference Texts</h2>
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {texts.map((item, idx) => (
@@ -33,10 +34,9 @@ export default function ResourcesPage() {
             />
           ))}
         </ul>
-      </section>
+      
 
       {/* Featured Presentations */}
-      <section>
         <h2 className="text-2xl font-semibold mb-4 text-indigo-400">Featured Presentations</h2>
         <div className="grid gap-8">
           {presentations.map((item, idx) => (

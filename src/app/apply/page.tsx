@@ -1,10 +1,12 @@
+import SectionHeader from "@/components/SectionHeader";
+
 export default function ApplyPage() {
   return (
-    <div className="max-w-3xl mx-auto p-4 text-center space-y-8">
-      <h1 className="text-4xl font-extrabold text-indigo-400">Apply to Join</h1>
-      <p className="text-lg text-gray-300">
-        {"We're currently closed to new members."}
-      </p>
+    <div className="max-w-3xl mx-auto px-4 text-center space-y-8">
+      <SectionHeader
+        title="Apply to Join"
+        description={"We’re currently closed to new members."}
+      />
 
       <div className="bg-indigo-950/40 border border-indigo-700 rounded-lg p-6 text-gray-300">
         <p className="text-lg font-medium">
