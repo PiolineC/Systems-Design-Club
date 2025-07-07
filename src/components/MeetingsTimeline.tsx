@@ -9,11 +9,15 @@ import {
   setHours,
   setMinutes
 } from "date-fns";
+import MeetingEntry from './MeetingEntry';
 import rawMeetings from '@/data/meetings.json';
 
 type Meeting = {
   title: string;
   datetime: string; // ISO string
+  filename?: string;
+  alt?: string;
+  description?: string;
 };
 
 const meetings: Meeting[] = rawMeetings;
@@ -48,9 +52,9 @@ export default function MeetingsTimeline() {
   const nextMeeting = upcomingMeetings[0];
 
   return (
-    <section className="max-w-2xl mx-auto p-4 sm:p-5">
+    <section className="max-w-5xl mx-auto p-4 sm:p-5">
       {nextMeeting && (
-        <div className="mb-2 bg-blue-100 text-blue-900 p-3 rounded-md shadow-sm">
+        <div className="max-w-2xl mx-auto mb-2 bg-blue-200 text-blue-900 p-3 mb-6 rounded-md shadow-sm">
           <p className="text-lg font-semibold">Next meeting:</p>
           <p className="text-xl font-bold">{nextMeeting.title}</p>
           <p className="text-sm text-gray-700">
@@ -62,19 +66,21 @@ export default function MeetingsTimeline() {
         </div>
       )}
 
-      <h2 className="text-xl font-semibold text-indigo-400 mt-3 mb-2">Past Meetings</h2>
-      <div className="scroll-on-hover max-h-[40vh] border border-gray-700 rounded-lg bg-gray-800 overflow-y-auto">
-        <ul className="divide-y divide-gray-700">
+      <section>
+        <h2 className="text-2xl font-bold mb-4 text-indigo-400">Past Meetings</h2>
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
           {pastMeetings.map((m) => (
-            <li key={m.datetime} className="p-3">
-              <p className="font-medium text-gray-300">{m.title}</p>
-              <p className="text-sm text-gray-500">
-                {format(new Date(m.datetime), "PPP")}
-              </p>
-            </li>
+            <MeetingEntry
+              key={m.datetime}
+              title={m.title}
+              datetime={m.datetime}
+              filename={m.filename}
+              alt={m.alt}
+              description={m.description}
+            />
           ))}
         </ul>
-      </div>
+      </section>
     </section>
   );
 }
