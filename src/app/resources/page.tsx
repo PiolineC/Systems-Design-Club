@@ -23,7 +23,7 @@ export default function ResourcesPage() {
       {/* Reference Texts */}
       <section>
         <h2 className="text-2xl font-bold mb-4 text-indigo-400">Reference Texts</h2>
-        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6 border-gray-700 rounded-lg bg-gray-800">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {texts.map((item, idx) => (
             <ReferenceCard 
               key={idx}
