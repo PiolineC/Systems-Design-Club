@@ -8,9 +8,10 @@ export default function LogoScroller() {
   return (
     <div className="relative w-full overflow-hidden">
       {/* Left Blur */}
-      <div className="pointer-events-none absolute left-0 top-0 h-full w-1/5 bg-gradient-to-r from-black via-black /60 to-transparent z-10" />
+      <div className="pointer-events-none absolute left-0 top-0 h-full w-1/5 bg-gradient-to-r from-[var(--background)] via-[var(--background)] to-transparent z-10" />
+
       {/* Right Blur */}
-      <div className="pointer-events-none absolute right-0 top-0 h-full w-1/5 bg-gradient-to-l from-black via-black /60 to-transparent z-10" />
+      <div className="pointer-events-none absolute right-0 top-0 h-full w-1/5 bg-gradient-to-l from-[var(--background)] via-[var(--background)] to-transparent z-10" />
 
       <div>
         <Marquee gradient={false} speed={50}>
