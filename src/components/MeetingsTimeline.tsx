@@ -63,7 +63,7 @@ export default function MeetingsTimeline() {
       )}
 
       <h2 className="text-xl font-semibold text-indigo-400 mt-3 mb-2">Past Meetings</h2>
-      <div className="scroll-on-hover max-h-64 sm:max-h-86 border border-gray-700 rounded-lg bg-gray-800 overflow-y-auto">
+      <div className="scroll-on-hover max-h-[40vh] border border-gray-700 rounded-lg bg-gray-800 overflow-y-auto">
         <ul className="divide-y divide-gray-700">
           {pastMeetings.map((m) => (
             <li key={m.datetime} className="p-3">
