@@ -26,11 +26,15 @@
   {
     "type": "presentation",
     "title": "Raft Consensus Algorithm",
-    "embedUrl": "https://docs.google.com/presentation/d/1TDunApBaR-3dmKYKa8BSrnadV6XqN1DhFxDMC-4GWNE/embed"
+    "author": "Pioline Choudhury",
+    "embedUrl": "https://docs.google.com/presentation/d/1TDunApBaR-3dmKYKa8BSrnadV6XqN1DhFxDMC-4GWNE/embed",
+    "thumbnailUrl": "/topics/Raft.png"
   },
   {
     "type": "presentation",
     "title": "How to Actually Build TinyURL",
-    "embedUrl": "https://docs.google.com/presentation/d/1VqmeWJ_A98m2CIEPaz4XQNs2itvCcmAGztozxLxfcDo/embed"
+    "author": "Nathan Zhu",
+    "embedUrl": "https://docs.google.com/presentation/d/1VqmeWJ_A98m2CIEPaz4XQNs2itvCcmAGztozxLxfcDo/embed",
+    "thumbnailUrl": "/topics/TinyURL.png"
   }
 ]
