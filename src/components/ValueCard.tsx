@@ -8,9 +8,11 @@ interface CardProps {
 
 export default function ValueCard({ icon, title, description }: CardProps) {
   return (
-    <div className="bg-gray-800 rounded-lg p-6 text-gray-300 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
-      <div className="h-10 w-10 mb-4 text-indigo-400">{icon}</div>
-      <h3 className="text-xl font-semibold mb-2 text-indigo-400">{title}</h3>
+    <div className="bg-gray-900 border border-gray-800 rounded-2xl p-6 text-left ring-1 ring-indigo-400">
+      <div className="flex items-center space-x-3 mb-4 text-indigo-400">
+        <div className="h-10 w-10 ">{icon}</div>
+        <h3 className="text-xl font-bold">{title}</h3>
+      </div>
       <p>{description}</p>
     </div>
   );

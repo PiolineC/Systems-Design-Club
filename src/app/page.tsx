@@ -14,7 +14,7 @@ export default function Home() {
       <TopicCarousel />
 
       {/* Value cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl w-17/20 mx-auto mb-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-6">
         <ValueCard
           icon={
             <svg
@@ -32,7 +32,7 @@ export default function Home() {
               />
             </svg>
           }
-          title={<>Inquiry-Based<br />Learning</>}
+          title={<>Inquiry-Based Learning</>}
           description="We believe learning is most powerful when driven by curiosity. Our members explore deeply, think critically, and take ownership of their growth."
         />
 
@@ -54,7 +54,7 @@ export default function Home() {
             </svg>
           }
           title="Professional Development"
-          description="We cultivate leadership and career readiness, guiding members through mock interviews, resume reviews, and professional development activities."
+          description="We cultivate leadership and career readiness, guiding members through mock interviews, resume reviews, and networking opportunities."
         />
 
         <ValueCard

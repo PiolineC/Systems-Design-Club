@@ -55,7 +55,7 @@ export default function MeetingsTimeline() {
     <section className="max-w-5xl mx-auto">
       {nextMeeting && (
         <div className="max-w-2xl mx-auto mb-6">
-          <div className="bg-blue-100 text-blue-900 border border-blue-300 rounded-lg shadow-sm p-4">
+          <div className="bg-blue-100 text-blue-900 border border-blue-300 rounded-lg shadow-sm p-4 ring-2 ring-blue-900">
             <p className="text-sm font-medium uppercase tracking-wide mb-1 text-blue-700">
               Next Meeting
             </p>
