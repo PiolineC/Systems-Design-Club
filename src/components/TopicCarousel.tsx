@@ -77,7 +77,7 @@ export default function TopicCarousel() {
   return (
     <div className="flex justify-center mb-6"> 
       <div
-        className=" w-full max-w-4xl mx-auto relative overflow-hidden aspect-video border border-gray-800 rounded-2xl p-6 text-left"
+        className=" w-full max-w-3xl mx-auto relative overflow-hidden aspect-video border border-gray-800 rounded-2xl p-6 text-left"
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
         onTouchStart={onTouchStart}

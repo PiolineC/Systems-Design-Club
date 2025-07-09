@@ -13,6 +13,11 @@ export default function Home() {
 
       <TopicCarousel />
 
+      <h3 className="text-indigo-400 text-center mb-6">
+        <LogoScroller />
+      </h3>
+      
+
       {/* Value cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-6">
         <ValueCard
@@ -79,10 +84,7 @@ export default function Home() {
         />
       </div>
 
-      <h3 className="text-indigo-400 text-center mb-1">
-        Special thanks to:
-      </h3>
-      <LogoScroller />
+    
 
     </main>
   );
