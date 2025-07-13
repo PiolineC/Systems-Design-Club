@@ -5,14 +5,14 @@ import Image from 'next/image';
 
 export default function TopicCarousel() {
   const images = useMemo(() => {
-    return meetings.map(({ filename, alt, title }) => ({
+    return meetings.reverse().map(({ filename, alt, title }) => ({
       src: `/topics/${filename}`,
       alt,
       title,
     }));
   }, []);
 
-  const [currentIndex, setCurrentIndex] = useState(images.length - 3);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const [paused, setPaused] = useState(false);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);

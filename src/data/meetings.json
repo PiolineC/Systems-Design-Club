@@ -94,5 +94,11 @@
         "datetime": "2025-07-06T17:00:00Z",
         "filename": "Hamming Codes.png",
         "alt": "Hamming Codes"
+    },
+    {
+        "title": "Introduction to Quantum Algorithms",
+        "datetime": "2025-07-13T17:00:00Z",
+        "filename": "Quantum Algorithms.png",
+        "alt": "Quantum Algorithms"
     }
 ]
