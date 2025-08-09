@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 type PresentationCardProps = {
   title: string;
@@ -20,10 +21,11 @@ export default function PresentationCard({
     >
       {thumbnailUrl ? (
         <div className="relative aspect-[16/9] w-full">
-          <img
+          <Image
             src={thumbnailUrl}
             alt={`Thumbnail for ${title}`}
-            className="object-cover w-full h-full"
+            fill 
+            className="object-cover" 
           />
         </div>
       ) : (

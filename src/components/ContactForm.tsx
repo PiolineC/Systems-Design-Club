@@ -34,10 +34,15 @@ export default function ContactForm() {
       } else {
         throw new Error(data.error || 'An unknown error occurred.');
       }
-    } catch (error: any) { 
-      console.error('Error!', error.message);
+    } catch (error) {
+      console.error('Submission failed:', error);
       setStatus('error');
-      setMessage('Oops! Something went wrong. Please check your connection and try again.');
+
+      if (error instanceof Error) {
+        setMessage(error.message);
+      } else {
+        setMessage('Oops! Something went wrong. Please check your connection and try again.');
+      }
     }
   };
 
