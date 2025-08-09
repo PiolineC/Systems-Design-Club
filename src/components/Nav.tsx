@@ -2,13 +2,14 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/meetings", label: "Meetings" },
   { href: "/resources", label: "Resources" },
-  { href: "/apply", label: "Apply" }
+  { href: "/contact", label: "Contact" }
 ];
 
 export default function Nav() {
@@ -20,8 +21,8 @@ export default function Nav() {
   return (
     <nav className="bg-gray-900 border-b border-gray-700 shadow-sm">
       <div className="container mx-auto flex justify-between items-center px-6 py-4">
-        <Link href="/" className="text-2xl font-bold text-indigo-400">
-          The Quorum
+        <Link href="/" className="flex items-center space-x-2 text-2xl font-bold text-indigo-400">
+          The Quorum <Image src="/logo.png" alt="Quorum Logo" width={32} height={32} />
         </Link>
 
         {/* Desktop menu */}

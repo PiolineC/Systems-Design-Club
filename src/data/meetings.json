@@ -100,5 +100,11 @@
         "datetime": "2025-07-13T17:00:00Z",
         "filename": "Quantum Algorithms.png",
         "alt": "Quantum Algorithms"
+    },
+    {
+        "title": "Dynamo: Amazon's Highly Available Key-value Store",
+        "datetime": "2025-08-10T17:00:00Z",
+        "filename": "Dynamo.png",
+        "alt": "Dynamo"
     }
 ]
