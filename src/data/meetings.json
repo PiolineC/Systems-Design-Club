@@ -102,9 +102,27 @@
         "alt": "Quantum Algorithms"
     },
     {
+        "title": "From RAGs to Riches",
+        "datetime": "2025-07-20T17:00:00Z",
+        "filename": "RAG.png",
+        "alt": "From RAGs to Riches"
+    },
+    {
         "title": "Dynamo: Amazon's Highly Available Key-value Store",
         "datetime": "2025-08-10T17:00:00Z",
         "filename": "Dynamo.png",
         "alt": "Dynamo"
+    },
+    {
+        "title": "A Case Against Microservices",
+        "datetime": "2025-08-17T17:00:00Z",
+        "filename": "Microservices.png",
+        "alt": "A Case Against Microservices"
+    },
+    {
+        "title": "Distributed Snapshots: The Chandy-Lamport Algorithm",
+        "datetime": "2025-08-24T17:00:00Z",
+        "filename": "CL.png",
+        "alt": "Distributed Snapshots: The Chandy-Lamport Algorithm"
     }
 ]

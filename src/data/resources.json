@@ -25,6 +25,13 @@
   },
   {
     "type": "presentation",
+    "title": "Dynamo: Amazon’s Highly Available Key-value Store",
+    "author": "Pioline Choudhury & Nathan Zhu",
+    "embedUrl": "https://docs.google.com/presentation/d/1QKvZqgOKqhKDzoiRY1O8YtdFyt31mq0v9cbnRR_Gbg8/embed",
+    "thumbnailUrl": "/topics/Dynamo.png"
+  },
+  {
+    "type": "presentation",
     "title": "Raft Consensus Algorithm",
     "author": "Pioline Choudhury",
     "embedUrl": "https://docs.google.com/presentation/d/1TDunApBaR-3dmKYKa8BSrnadV6XqN1DhFxDMC-4GWNE/embed",
