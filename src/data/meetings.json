@@ -148,5 +148,11 @@
         "datetime": "2025-10-05T17:00:00Z",
         "filename": "Debugging 2.png",
         "alt": "A Principal's Playbook for Strategic Debugging Part 2"
+    },
+    {
+        "title": "If You Understand Elasticsearch, Then You Understand Transformers!",
+        "datetime": "2025-10-19T17:00:00Z",
+        "filename": "IQKO.png",
+        "alt": "If You Understand Elasticsearch, Then You Understand Transformers!"
     }
 ]
